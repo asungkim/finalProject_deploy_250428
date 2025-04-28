@@ -57,7 +57,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           instance-ids: ${{ env.INSTANCE_ID }}
           command: |
-            cd /path/to/your/docker-compose-folder &&
+            cd /bin/usr/gitApp/backend &&
             docker pull ghcr.io/${{ github.repository_owner }}/pick-go-app:latest &&
             docker stop pick-go-app || true &&
             docker rm pick-go-app || true &&
